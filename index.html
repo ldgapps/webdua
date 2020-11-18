@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/prism.css">
+    <title>Paginator</title>
+    <script src="js/prism.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/b7josiai75m72zzxskfbs8gnflru597s00l079koinecitsf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            language: 'es',
+            encoding: 'UTF-8',
+            selector: "textarea",
+            plugins: [
+                "advlist autolink lists link image charmap print preview anchor checklist",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime media table contextmenu paste image codesample"
+            ],
+            codesample_languages: [{
+                    text: 'HTML/XML',
+                    value: 'markup'
+                },
+                {
+                    text: 'JavaScript',
+                    value: 'javascript'
+                },
+                {
+                    text: 'CSS',
+                    value: 'css'
+                },
+                {
+                    text: 'PHP',
+                    value: 'php'
+                },
+            ],
+            toolbar: "codesample | checklist | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |  image code | print",
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title ">Bienvenidos a Paginator</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Aquí puede crear e imprimir sus chuletas y documentos online</p>
+                    <img src="img/paper-3033204_640.jpg"  class="img-fluid" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><i class="far fa-file-alt mr-2"></i>Paginator</a>
+    </nav>
+    <div class="container">
+  
+            <div class="alert alert-secondary mt-4" role="alert">
+                <h4 class="text-center"><i class="fas fa-file-alt"></i> Crea tu chuleta</h4>
+
+            </div>
+            <textarea name="" class="form-control mt-2" id="editor" cols="60" id="editor" rows="1" placeholder="Escribir contenido"></textarea>
+            <div class="alert alert-success mt-4" role="alert">
+                Gracias por usar nuestro servicio. Donaciones o propinas voluntarias:
+ES38 2038 9631 1060 0038 4890            </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#myModal').modal('toggle');
+        });
+    </script>
+</body>
+
+</html>
